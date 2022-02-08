@@ -37,3 +37,28 @@ test('logout button appears when name has been input', () => {
 
   expect(logoutButton).toBeInTheDocument();
 });
+
+test('tests that entries are rendered', () => {
+  render(
+    <EntryProvider>
+      <UserProvider>
+        <App />
+      </UserProvider>
+    </EntryProvider>
+  );
+  const signButton = screen.getByRole('button', { name: /sign/i });
+  const input = screen.getByPlaceholderText(/name/i);
+  const message = screen.getByPlaceholderText(/your message/i);
+
+  userEvent.type(input, 'ian');
+  userEvent.type(message, 'this is an entry');
+  userEvent.click(signButton);
+
+  const post = screen.getByText(/this is an entry/i);
+  const name = screen.getByRole('heading', { name: /- ian/i });
+  const div = screen.getByTestId('entry');
+
+  expect(post).toBeInTheDocument();
+  expect(name).toBeInTheDocument();
+  expect(div).toBeInTheDocument();
+});
