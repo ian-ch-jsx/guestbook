@@ -16,7 +16,7 @@ test('renders the header', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('logout button appears when name has been input', () => {
+test('logout button appears when name has been input and input disappears', () => {
   render(
     <EntryProvider>
       <UserProvider>
@@ -36,6 +36,7 @@ test('logout button appears when name has been input', () => {
   const logoutButton = screen.getByTestId('logout-button');
 
   expect(logoutButton).toBeInTheDocument();
+  expect(input).not.toBeInTheDocument();
 });
 
 test('tests that entries are rendered', () => {
