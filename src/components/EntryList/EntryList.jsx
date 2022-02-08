@@ -1,9 +1,15 @@
-import React from 'react';
+import { useEntries } from '../../context/EntryContext';
+import Entry from '../Entry/Entry';
 
 export default function EntryList() {
+  const { entries } = useEntries();
   return (
-    <div>
-      <h1>entrylist</h1>
+    <div className="entry-list">
+      {entries.map((entry) => (
+        <p key={entry.name}>
+          <Entry entry={entry} />
+        </p>
+      ))}
     </div>
   );
 }
