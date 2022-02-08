@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
 .App {
   text-align: center;
+}
+
+body {
+  background-color: #fefefe;
+  font-family: 'fira code', sans-serif;
+}
+
+h1 {
+  font-family: 'fira code', sans-serif;
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useEntries } from '../../context/EntryContext';
 import { useUser } from '../../context/UserContext';
+import './Guestbook.css';
 
 export default function Guestbook() {
   const [name, setName] = useState('');
@@ -16,9 +17,6 @@ export default function Guestbook() {
 
   const nameInput = (
     <div className="form">
-      <span>
-        <label htmlFor="name">Name:</label>
-      </span>
       <span>
         <input
           id="name"
@@ -36,7 +34,7 @@ export default function Guestbook() {
     updateGuest();
   };
 
-  const message = user ? 'Thanks for signing!' : 'Please sign!';
+  const message = user ? 'Thanks for signing!' : '';
   return (
     <div>
       <h2>{message}</h2>
@@ -52,7 +50,7 @@ export default function Guestbook() {
         </span>
         <span>
           <button className="button" type="submit">
-            Sign
+            sign
           </button>
           {user && (
             <button
