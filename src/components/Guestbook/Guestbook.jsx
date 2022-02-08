@@ -56,6 +56,7 @@ export default function Guestbook() {
           </button>
           {user && (
             <button
+              data-testid="logout-button"
               type="button"
               onClick={() => {
                 setName('');
