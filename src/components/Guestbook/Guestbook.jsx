@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useEntries } from '../../context/EntryContext';
 import { useUser } from '../../context/UserContext';
+import { v4 as uuid } from 'uuid';
 import './Guestbook.css';
 
 export default function Guestbook() {
@@ -12,11 +13,12 @@ export default function Guestbook() {
   function updateGuest() {
     if (!entry) return;
     setUser(name);
-    setEntries([...entries, { name, message: entry }]);
+    setEntries([...entries, { name, message: entry, id: uuid() }]);
+    setEntry('');
   }
 
   const nameInput = (
-    <div className="form">
+    <div className="name-form">
       <span>
         <input
           id="name"

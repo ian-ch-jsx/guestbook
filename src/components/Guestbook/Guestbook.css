@@ -4,16 +4,16 @@
   margin: auto;
 }
 
-.form {
+.name-form {
   display: flex;
   justify-content: center;
   margin: 5px;
-  color: #ff2e1f;
 }
-.form input {
+.name-form input {
   background-color: #f9ffeb;
-  color: #ff2e1f;
   border: 1px solid #ff8d85;
+  font-family: 'fira code', sans-serif;
+  width: 200px;
 }
 
 button {
@@ -28,11 +28,15 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: #ff8d85;
+  color: #f9ffeb;
+  border: 1px solid #ff2e1f;
 }
 
 textarea {
   border: 1px solid #ff8d85;
   height: 100px;
+  width: 200px;
   background-color: #f9ffeb;
   color: #ff2e1f;
 }

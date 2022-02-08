@@ -7,7 +7,7 @@ export default function EntryList() {
   return (
     <div className="entry-list">
       {entries.map((entry) => (
-        <span key={entry.name}>
+        <span key={entry.id}>
           <Entry entry={entry} />
         </span>
       ))}
