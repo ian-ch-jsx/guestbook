@@ -1,0 +1,42 @@
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.name-form {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.name-form input {
+  background-color: #f9ffeb;
+  border: 1px solid #ff8d85;
+  font-family: 'fira code', sans-serif;
+  width: 200px;
+}
+
+button {
+  font-family: 'fira code', sans-serif;
+  text-transform: uppercase;
+  background-color: #f9ffeb;
+  border: 1px solid #ff8d85;
+  border-radius: 2px;
+  color: #ff2e1f;
+  margin: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #ff8d85;
+  color: #f9ffeb;
+  border: 1px solid #ff2e1f;
+}
+
+textarea {
+  border: 1px solid #ff8d85;
+  height: 100px;
+  width: 200px;
+  background-color: #f9ffeb;
+  color: #ff2e1f;
+}

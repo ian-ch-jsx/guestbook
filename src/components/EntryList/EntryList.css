@@ -1,0 +1,21 @@
+.entry-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+}
+
+.entry-list span {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  background-color: #f9ffeb;
+  width: 200px;
+  min-height: 100px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ff8d85;
+  align-items: center;
+  color: #ff2e1f;
+  font-size: 0.9rem;
+}
