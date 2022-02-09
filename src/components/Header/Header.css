@@ -2,7 +2,7 @@
   display: flex;
   background-color: #fe5f55;
   margin: auto;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0px 20px 0px 20px;
   filter: drop-shadow(0px 3px 4px #bbb6b6);
@@ -19,4 +19,8 @@ h1 {
 
 h2 {
   color: #ff2e1f;
+}
+
+.spaceholder {
+  width: 120px;
 }
