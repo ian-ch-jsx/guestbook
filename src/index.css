@@ -19,10 +19,10 @@ body {
 }
 
 [data-theme='dark'] {
-  --color-1: #36443f;
-  --color-2: #121212;
-  --color-3: #aaae7f;
-  --color-4: #1a2323;
-  --color-5: #eff1e5;
-  --color-6: #aaae7f;
+  --color-1: #1f1f1f;
+  --color-2: #181818;
+  --color-3: #fbe44b;
+  --color-4: #141414;
+  --color-5: #fdf3af;
+  --color-6: #fbe44b;
 }

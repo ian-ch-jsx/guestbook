@@ -4,13 +4,19 @@
   margin: auto;
 }
 
+input {
+  color: var(--color-6);
+}
+
 .name-form {
   display: flex;
   justify-content: center;
   margin: 5px;
+  color: var(--color-6);
 }
 .name-form input {
   background-color: var(--color-2);
+  color: var(--color-6);
   border: 1px solid var(--color-3);
   font-family: 'fira code', sans-serif;
   width: 200px;
@@ -22,7 +28,7 @@ button {
   background-color: var(--color-2);
   border: 1px solid var(--color-3);
   border-radius: 2px;
-  color: var(--color-4);
+  color: var(--color-6);
   margin: 4px;
 }
 
@@ -38,7 +44,7 @@ textarea {
   height: 100px;
   width: 200px;
   background-color: var(--color-2);
-  color: var(--color-5);
+  color: var(--color-6);
 }
 
 .form-container h2 {
