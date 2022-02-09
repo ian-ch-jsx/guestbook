@@ -6,6 +6,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-1);
 }
 
 :root {
@@ -13,27 +14,15 @@ body {
   --color-2: #f9ffeb;
   --color-3: #ff8d85;
   --color-4: #ff2e1f;
-  --color-5: #fffff;
+  --color-5: #ffffff;
+  --color-6: #ff2e1f;
 }
 
 [data-theme='dark'] {
-  --background: black;
-  --secondary-background: #f9ffeb;
-  --text-secondary: grey;
-  --accent: darkred;
-}
-
-.App {
-  color: var(--text-primary);
-  background-color: var(--background);
-}
-
-.App h1 {
-  color: var(--text-primary);
-}
-
-button {
-  color: var(--text-primary);
-  background-color: var(--background);
-  border: 2px var(--text-primary) solid;
+  --color-1: #36443f;
+  --color-2: #121212;
+  --color-3: #aaae7f;
+  --color-4: #1a2323;
+  --color-5: #eff1e5;
+  --color-6: #aaae7f;
 }
