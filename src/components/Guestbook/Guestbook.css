@@ -4,14 +4,20 @@
   margin: auto;
 }
 
+input {
+  color: var(--color-6);
+}
+
 .name-form {
   display: flex;
   justify-content: center;
   margin: 5px;
+  color: var(--color-6);
 }
 .name-form input {
-  background-color: #f9ffeb;
-  border: 1px solid #ff8d85;
+  background-color: var(--color-2);
+  color: var(--color-6);
+  border: 1px solid var(--color-3);
   font-family: 'fira code', sans-serif;
   width: 200px;
 }
@@ -19,24 +25,28 @@
 button {
   font-family: 'fira code', sans-serif;
   text-transform: uppercase;
-  background-color: #f9ffeb;
-  border: 1px solid #ff8d85;
+  background-color: var(--color-2);
+  border: 1px solid var(--color-3);
   border-radius: 2px;
-  color: #ff2e1f;
+  color: var(--color-6);
   margin: 4px;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #ff8d85;
-  color: #f9ffeb;
-  border: 1px solid #ff2e1f;
+  background-color: var(--color-3);
+  color: var(--color-2);
+  border: 1px solid var(--color-4);
 }
 
 textarea {
-  border: 1px solid #ff8d85;
+  border: 1px solid var(--color-3);
   height: 100px;
   width: 200px;
-  background-color: #f9ffeb;
-  color: #ff2e1f;
+  background-color: var(--color-2);
+  color: var(--color-6);
+}
+
+.form-container h2 {
+  color: var(--color-6);
 }

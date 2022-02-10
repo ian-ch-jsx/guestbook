@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useEntries } from '../../context/EntryContext';
 import { useUser } from '../../context/UserContext';
+import { useTheme } from '../../context/ThemeContext';
 import { v4 as uuid } from 'uuid';
 import './Guestbook.css';
 
@@ -9,6 +10,7 @@ export default function Guestbook() {
   const [entry, setEntry] = useState('');
   const { user, setUser } = useUser();
   const { entries, setEntries } = useEntries();
+  const { theme } = useTheme();
 
   function updateGuest() {
     if (!entry) return;
@@ -18,7 +20,7 @@ export default function Guestbook() {
   }
 
   const nameInput = (
-    <div className="name-form">
+    <div className="name-form" data-theme={theme}>
       <span>
         <input
           id="name"
@@ -38,7 +40,7 @@ export default function Guestbook() {
 
   const message = user ? 'Thanks for signing!' : '';
   return (
-    <div>
+    <div className="form-container" data-theme={theme}>
       <h2>{message}</h2>
       {user ? null : nameInput}
       <form className="entry-form" onSubmit={handleSubmit}>

@@ -9,13 +9,13 @@
   display: flex;
   margin: 20px;
   justify-content: center;
-  background-color: #f9ffeb;
+  background-color: var(--color-2);
   width: 200px;
   min-height: 100px;
   padding: 5px;
   border-radius: 3px;
-  border: 1px solid #ff8d85;
+  border: 1px solid var(--color-3);
   align-items: center;
-  color: #ff2e1f;
+  color: var(--color-6);
   font-size: 0.9rem;
 }

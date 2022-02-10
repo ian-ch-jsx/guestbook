@@ -2,15 +2,18 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
 import { EntryProvider } from './context/EntryContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { UserProvider } from './context/UserContext';
 
 test('renders the header', () => {
   render(
-    <EntryProvider>
-      <UserProvider>
-        <App />
-      </UserProvider>
-    </EntryProvider>
+    <ThemeProvider>
+      <EntryProvider>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </EntryProvider>
+    </ThemeProvider>
   );
   const linkElement = screen.getByText(/sign the guestbook/i);
   expect(linkElement).toBeInTheDocument();
@@ -18,11 +21,13 @@ test('renders the header', () => {
 
 test('logout button appears when name has been input and input disappears', () => {
   render(
-    <EntryProvider>
-      <UserProvider>
-        <App />
-      </UserProvider>
-    </EntryProvider>
+    <ThemeProvider>
+      <EntryProvider>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </EntryProvider>
+    </ThemeProvider>
   );
 
   const signButton = screen.getByRole('button', { name: /sign/i });
@@ -41,11 +46,13 @@ test('logout button appears when name has been input and input disappears', () =
 
 test('tests that entries are rendered', () => {
   render(
-    <EntryProvider>
-      <UserProvider>
-        <App />
-      </UserProvider>
-    </EntryProvider>
+    <ThemeProvider>
+      <EntryProvider>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </EntryProvider>
+    </ThemeProvider>
   );
   const signButton = screen.getByRole('button', { name: /sign/i });
   const input = screen.getByPlaceholderText(/name/i);
