@@ -4,8 +4,7 @@ import useLocalStorage from '../hooks/LocalStorage';
 const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'light' : 'dark');
+  const [theme, setTheme] = useLocalStorage('theme', 'light', 'dark');
 
   return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
 };
