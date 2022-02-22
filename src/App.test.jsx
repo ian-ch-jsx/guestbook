@@ -46,7 +46,7 @@ test('tests that an entry is rendered after input', () => {
   expect(div).toBeInTheDocument();
 });
 
-test('successful login redirects to entry form', () => {
+test('successful login redirects to entry form', async () => {
   render(
     <ThemeProvider>
       <EntryProvider>
@@ -64,7 +64,7 @@ test('successful login redirects to entry form', () => {
   userEvent.type(password, 'puppy');
   userEvent.click(loginButton);
 
-  const inputForm = screen.getByLabelText(/message-textarea/i);
+  const inputForm = await screen.findByLabelText(/message-textarea/i);
 
   expect(inputForm).toBeInTheDocument();
 });
