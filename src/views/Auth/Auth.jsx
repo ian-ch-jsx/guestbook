@@ -12,7 +12,6 @@ export default function Auth() {
   const location = useLocation();
   const history = useHistory();
   const [error, setError] = useState('');
-  console.log('username', process.env.REACT_APP_AUTH_USERNAME);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
