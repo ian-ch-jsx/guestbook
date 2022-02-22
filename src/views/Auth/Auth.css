@@ -1,17 +1,18 @@
-.form-container {
+.auth-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
 }
 
-.form-container form {
+.auth-container form {
   display: flex;
   flex-direction: column;
-  margin: auto;
 }
 
-.form-container h2 {
+.auth-container h2 {
   color: var(--color-6);
+  font-size: 1rem;
+  font-weight: 100;
+  text-transform: uppercase;
 }

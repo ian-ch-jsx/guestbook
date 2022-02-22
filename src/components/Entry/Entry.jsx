@@ -1,10 +1,13 @@
+import { useUser } from '../../context/UserContext';
 import './Entry.css';
 
-export default function Entry({ entry: { name, message } }) {
+export default function Entry({ entry: { message } }) {
+  const { user } = useUser();
+
   return (
     <div className="entry-card" data-testid="entry">
       <p>{message}</p>
-      <h3>- {name}</h3>
+      <h3>- {user}</h3>
     </div>
   );
 }
