@@ -13,36 +13,17 @@ export default function Guestbook() {
   const { theme } = useTheme();
 
   function updateGuest() {
-    if (!entry) return;
-    setUser(name);
     setEntries([...entries, { name, message: entry, id: uuid() }]);
     setEntry('');
   }
-
-  const nameInput = (
-    <div className="name-form" data-theme={theme}>
-      <span>
-        <input
-          id="name"
-          type="text"
-          placeholder="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </span>
-    </div>
-  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
     updateGuest();
   };
 
-  const message = user ? 'Thanks for signing!' : '';
   return (
     <div className="form-container" data-theme={theme}>
-      <h2>{message}</h2>
-      {user ? null : nameInput}
       <form className="entry-form" onSubmit={handleSubmit}>
         <span>
           <textarea

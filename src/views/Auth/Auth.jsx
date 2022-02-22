@@ -21,8 +21,6 @@ export default function Auth() {
       setUser(name);
       const { from } = location.state || { from: { pathname: '/' } };
       history.replace(from.pathname);
-    } else {
-      console.log(error);
     }
   };
 
