@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom/';
 import { useTheme } from '../../context/ThemeContext';
 import { useUser } from '../../context/UserContext';
+import './Auth.css';
 
 export default function Auth() {
   const [name, setName] = useState('');
@@ -25,9 +26,8 @@ export default function Auth() {
   };
 
   return (
-    <div className="form-container" data-theme={theme}>
-      <form>
-        <label htmlFor="username">name: </label>
+    <div className="auth-container" data-theme={theme}>
+      <form className="auth-form">
         <input
           id="username"
           placeholder="name"
