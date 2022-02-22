@@ -9,8 +9,8 @@ export default function ThemeControls() {
     setTheme(newTheme);
   };
   return (
-    <div className="theme-toggle" data-theme={theme}>
+    <span className="theme-toggle" data-theme={theme}>
       <button onClick={switchTheme}>{theme === 'light' ? 'Dark' : 'Light'} mode</button>
-    </div>
+    </span>
   );
 }

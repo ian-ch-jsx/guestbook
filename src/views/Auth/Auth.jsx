@@ -11,7 +11,7 @@ export default function Auth() {
   const { theme } = useTheme();
   const location = useLocation();
   const history = useHistory();
-  const error = 'invalid login credentials.';
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,16 +22,19 @@ export default function Auth() {
       setUser(name);
       const { from } = location.state || { from: { pathname: '/' } };
       history.replace(from.pathname);
+    } else {
+      setError('boo, you suck!');
     }
   };
 
   return (
     <div className="auth-container" data-theme={theme}>
-      <form className="auth-form">
+      <form>
         <input
           id="username"
           placeholder="name"
           type="text"
+          name="username"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -42,6 +45,7 @@ export default function Auth() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button onClick={handleSubmit}>Sign In</button>
+        {error && <h2>{error}</h2>}
       </form>
     </div>
   );

@@ -24,12 +24,13 @@ export default function Guestbook() {
 
   return (
     <div className="form-container" data-theme={theme}>
-      <form className="entry-form" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <span>
           <textarea
             className="entry-box"
             value={entry}
             placeholder="your message"
+            aria-label="message-textarea"
             onChange={(e) => setEntry(e.target.value)}
           />
         </span>
@@ -37,17 +38,15 @@ export default function Guestbook() {
           <button className="button" type="submit">
             sign
           </button>
-          {user && (
-            <button
-              data-testid="logout-button"
-              type="button"
-              onClick={() => {
-                setUser('');
-              }}
-            >
-              Im not {user}!
-            </button>
-          )}
+          <button
+            aria-label="logout"
+            type="button"
+            onClick={() => {
+              setUser('');
+            }}
+          >
+            Im not {user}!
+          </button>
         </span>
       </form>
     </div>

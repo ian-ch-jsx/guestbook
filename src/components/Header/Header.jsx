@@ -9,10 +9,10 @@ export default function Header() {
 
   const welcome = user ? `Hi, ${user}!` : 'sign the guestbook';
   return (
-    <div className="header" data-theme={theme}>
+    <header data-theme={theme}>
       <span className="spaceholder"></span>
       <h1>{welcome}</h1>
       <ThemeControls />
-    </div>
+    </header>
   );
 }

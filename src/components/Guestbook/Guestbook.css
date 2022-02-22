@@ -1,11 +1,12 @@
 .form-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  margin-top: 100px;
 }
 
-.entry-form {
+.form-container form {
   display: flex;
   flex-direction: column;
   margin: auto;
