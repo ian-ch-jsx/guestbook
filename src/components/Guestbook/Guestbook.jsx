@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid';
 import './Guestbook.css';
 
 export default function Guestbook() {
-  const [name, setName] = useState('');
+  const [name] = useState('');
   const [entry, setEntry] = useState('');
   const { user, setUser } = useUser();
   const { entries, setEntries } = useEntries();
@@ -42,7 +42,6 @@ export default function Guestbook() {
               data-testid="logout-button"
               type="button"
               onClick={() => {
-                setName('');
                 setUser('');
               }}
             >
