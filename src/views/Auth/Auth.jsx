@@ -34,13 +34,14 @@ export default function Auth() {
           id="username"
           placeholder="name"
           type="text"
-          name="username"
+          aria-label="username"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="password"
           placeholder="password"
+          aria-label="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
