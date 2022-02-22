@@ -65,6 +65,6 @@ test('successful login redirects to entry form', () => {
   userEvent.click(loginButton);
 
   const inputForm = screen.getByLabelText(/message-textarea/i);
-
+  screen.debug();
   expect(inputForm).toBeInTheDocument();
 });
