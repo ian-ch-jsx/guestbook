@@ -1,12 +1,16 @@
 import { useState } from 'react';
+import { useHistory, useLocation } from 'react-router-dom/';
 import { useTheme } from '../../context/ThemeContext';
 import { useUser } from '../../context/UserContext';
 
 export default function Auth() {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
-  const { user, setUser } = useUser();
+  const { setUser } = useUser();
   const { theme } = useTheme();
+  const location = useLocation();
+  const history = useHistory();
+  const error = 'invalid login credentials.';
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,9 +19,10 @@ export default function Auth() {
       password === process.env.REACT_APP_AUTH_PASSWORD
     ) {
       setUser(name);
-      console.log('yay');
+      const { from } = location.state || { from: { pathname: '/' } };
+      history.replace(from.pathname);
     } else {
-      console.log('frick');
+      console.log(error);
     }
   };
 

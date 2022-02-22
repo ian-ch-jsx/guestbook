@@ -7,8 +7,6 @@ import Auth from '../Auth/Auth';
 export default function Home() {
   return (
     <EntryProvider>
-      <Header />
-      <Auth />
       <Guestbook />
       <EntryList />
     </EntryProvider>
